@@ -26,7 +26,7 @@ class CreateTransactionService {
     }
 
     let categoryFromRepository = await categoryRepository.findOne({
-      where: { title },
+      where: { category: title },
     });
 
     if (!categoryFromRepository) {
